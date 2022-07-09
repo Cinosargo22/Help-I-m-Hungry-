@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Help, I'm Hungry!
 
 ## Project Explained
@@ -11,16 +12,20 @@ After completing this project, we had the following takeaways:
 <br></br>
 
 ## Table of Contents
-- [Success Criteria](#success-criteria)
-- [User Stories](#user-stories)
-- [Acceptance Criteria](#acceptance-criteria)
-- [Link to Deployed Application](#link-to-deployed-application)
-- [Finished Page for Reference](#finished-page-for-reference)
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
-- [Contributing](#contributing)
-- [Authors](#authors)
+- [Help, I'm Hungry!](#help-im-hungry)
+  - [Project Explained](#project-explained)
+  - [Table of Contents](#table-of-contents)
+  - [Success Criteria](#success-criteria)
+    - [User Stories](#user-stories)
+    - [Acceptance Criteria](#acceptance-criteria)
+  - [Link to Deployed Application](#link-to-deployed-application)
+  - [Finished Page for Reference](#finished-page-for-reference)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Authors](#authors)
+- [TeSingleton - Svante Singleton-McDaniel<br></br>](#tesingleton---svante-singleton-mcdanielbr)
 <br></br>
 ## Success Criteria
 
@@ -77,3 +82,4 @@ musaliyah - Aliyah Musaliar<br></br>
 Cinosargo22 - Andres Covas<br></br>
 danaejocey - Jocelyn Gonzalez<br></br>
 TeSingleton - Svante Singleton-McDaniel<br></br>
+=======
