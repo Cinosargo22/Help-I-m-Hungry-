@@ -4,9 +4,14 @@ align-content: center; */
 background-color: #FFBA08;
 };
 
-
+/* todo */
 img{
 
+};
+/* this class will be used to give a border and color to `a` tags */
+.protien-list ul, li{
+    border-bottom: double;
+    border-color: #261447;
 };
 
 
