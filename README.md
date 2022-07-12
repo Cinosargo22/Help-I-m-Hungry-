@@ -10,6 +10,7 @@ After completing this project, we had the following takeaways:
 * wireframe first
 <br></br>
 
+
 ## Table of Contents
 - [Help, I'm Hungry!](#help-im-hungry)
   - [Project Explained](#project-explained)
@@ -24,6 +25,7 @@ After completing this project, we had the following takeaways:
   - [License](#license)
   - [Contributing](#contributing)
   - [Authors](#authors)
+- [TeSingleton - Svante Singleton-McDaniel<br></br>](#tesingleton---svante-singleton-mcdanielbr)
 <br></br>
 ## Success Criteria
 
@@ -80,4 +82,3 @@ musaliyah - Aliyah Musaliar<br></br>
 Cinosargo22 - Andres Covas<br></br>
 danaejocey - Jocelyn Gonzalez<br></br>
 TeSingleton - Svante Singleton-McDaniel<br></br>
-
