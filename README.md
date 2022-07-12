@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Help, I'm Hungry!
 
 ## Project Explained
@@ -10,6 +9,7 @@ After completing this project, we had the following takeaways:
 * fail fast
 * wireframe first
 <br></br>
+
 
 ## Table of Contents
 - [Help, I'm Hungry!](#help-im-hungry)
@@ -82,4 +82,3 @@ musaliyah - Aliyah Musaliar<br></br>
 Cinosargo22 - Andres Covas<br></br>
 danaejocey - Jocelyn Gonzalez<br></br>
 TeSingleton - Svante Singleton-McDaniel<br></br>
-=======
