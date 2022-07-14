@@ -4,38 +4,49 @@ var accentRed = "#69140E";
 var borderPurple ="#261447";
 var bgWhite = "#FBFEF9";
 
+var ingredientInputEl = document.querySelector('.ingredient-input');
+var ingredientSearchButton = document.querySelector('.ingredient-button');
+requestUrl = 'https://api.edamam.com/api/recipes/v2?type=public&q=chicken&app_id=94c55930&app_key=%201c3476c6fc8d3b7ee88d9f887c63fd85'
+
+// fetch(requestUrl)
+//   .then(function (response) {
+//     return response.json();
+//   })
+//   .then(function (data) {
+//     console.log(data);
+//   });
+
+
+
 var formSubmitHandler = function (event) {
+    console.log(event);
     event.preventDefault();
 
     var ingredient = ingredientInputEl.value.trim();
+    console.log(ingredient);
 
-    if (ingredient) {
-        getRecipeRepos(ingredient);
+    if (ingredient) { console.log('if(ingredient)')
+        getRecipe(ingredient);
 
-        repoContainerEl.textContent = '';
-        recipeInputEl.value = '';
+        // repoContainerEl.textContent = '';
+        // recipeInputEl.value = '';
     } else {
+        //change to modal
         alert('Please enter at least one ingredient! Dig to the back of your pantry!');
         console.log(ingredient);
     }
 };
 
-var getRecipeRepos = function (ingredient) {
-    var apiUrl = 'https://api.edamam.com/api/recipes/v2?type=public&q=chicken&app_id=94c55930&app_key=%201c3476c6fc8d3b7ee88d9f887c63fd85'
+var getRecipe = function (ingredient) {
+    var apiUrl = 'https://api.edamam.com/api/recipes/v2?type=public&q=' + ingredient + '&app_id=94c55930&app_key=%201c3476c6fc8d3b7ee88d9f887c63fd85'
 
-    fetch(apiUrl).then(function (response) {
-        if (response.ok) {
-            response.json().then(function (data) {
-                displayRepos(data.items);
-            });
-        } else {
-            alert('Error: ' + response.statusText);
-        }
+    fetch(apiUrl)
+    .then(function (response) {
+        return response.json()
+    })
+    .then(function (data) {
+        console.log(data);
     });
 };
 
-var displayRepos = function (repos, searchTerm) {
-    if (repos.length === 0) {
-        repoContainerEl.textContent
-    }
-}
+ingredientSearchButton.addEventListener('click', formSubmitHandler);
