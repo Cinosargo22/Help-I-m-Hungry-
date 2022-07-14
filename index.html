@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Help! I'm Hungry!</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
+    
   </head>
   <body style="background-image: url(./assets/bg-imgs/pexels-cottonbro-4113949.jpg); background-size:cover; background-blend-mode:luminosity ;">
     <!-- nav bar -->
@@ -55,11 +57,12 @@
     </section>
 <!-- todo...possible hro section to import gifs or a welcome message -->
     <!-- More quick links...promoted/popular recipies  -->
-    <section class="section is-medium">
+    <section class="section is-medium is-mobile" >
       <h1 class="title">'Spotlight recipies'</h1>
       <h2 class="subtitle">
          View a few of our <strong>favorites</strong> below .
       </h2>
+      <section class="section is-large is-mobile" >
       <div class="columns is-mobile">
         <div class="column">
               </a></div><div class="card">
@@ -206,10 +209,13 @@
     </div>
   </div>
 </div>
+
       
         
         
       </div>
+    </section>
+      
     </section>
 
     <!-- Place-Holder footer -->
@@ -224,6 +230,15 @@
       </div>
     </footer>
     <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+    <script>
+      bulmaCarousel.attach('#slider', {
+          slidesToScroll: 1,
+          slidesToShow: 1,
+          infinite: true,
+          autoplay: true,
+      });
+  </script>
   </body>
 
 </html>
