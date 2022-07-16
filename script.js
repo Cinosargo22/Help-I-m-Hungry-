@@ -50,13 +50,25 @@ var getRecipe = function (ingredient) {
     })
     .then(function (data) {
         console.log(data)
-       // displayRecipe(data.hits);
+        showRecipe(data.hits)
+        // img.setAttribute("src", imgPath)
+        // document.body.appendChild(img)
     })
     .catch(function (error) {
         alert('Unable to connect to Edamam.');
-        console.log(error);
+        // console.log(error);
     });
 };
+
+var showRecipe = function(hits) {
+    var recipeUrlPath = hits[0].recipe.url
+    console.log(recipeUrlPath)
+    var recipeImgPath = hits[0].recipe.images.REGULAR.url
+    console.log(recipeImgPath)
+    var recipe = document.createElement("recipe")
+    console.log(recipe)
+    document.body.appendChild(recipe)
+}
 
 ingredientSearchButton.addEventListener('click', formSubmitHandler);
 
