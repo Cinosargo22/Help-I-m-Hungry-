@@ -6,6 +6,8 @@
 // var borderPurple ="#261447";
 // var bgWhite = "#FBFEF9";
 
+var giphyPrint = document.getElementById("ingredient-form");
+
 var ingredientInputEl = document.querySelector(".ingredient-input");
 var ingredientSearchButton = document.querySelector(".ingredient-button");
 
@@ -22,7 +24,7 @@ var formSubmitHandler = function (event) {
     sendApiRequest(ingredient);
   } else {
     //change to modal
-    alert(
+    modal(
       "Please enter at least one ingredient! Dig to the back of your pantry!"
     );
     console.log(ingredient);
@@ -45,11 +47,11 @@ var getRecipe = function (ingredient) {
 
       // img.setAttribute("src", imgPath)
       // document.body.appendChild(img)
-    })
-    // .catch(function (error) {
-    //   alert("Unable to connect to Edamam.");
-    //   // console.log(error);
-    // });
+    });
+  // .catch(function (error) {
+  //   alert("Unable to connect to Edamam.");
+  //   // console.log(error);
+  // });
 };
 
 function showRecipe(data) {
@@ -58,16 +60,13 @@ function showRecipe(data) {
 
   for (var i = 0; i < 5; i++) {
     console.log(data.hits[i].recipe.url);
-    // change styling of template to the card format that we want 
-    let template = `<div class="card cell medium-4" style="width: 300px;">
-                <div class=""><a href="${data.hits[i].recipe.url}" target="_blank">${data.hits[i].recipe.label
-    }</a></div>
-                <img src="${data.hits[i].recipe.image}" alt="${
-      data.hits[i].recipe.label
-    }" SameSite="Lax">
+    // change styling of template to the card format that we want
+    let template = `<div class="card  is-medium media " style="width: 500px;">
+                <div class=""><a href="${data.hits[i].recipe.url}" target="_blank">${data.hits[i].recipe.label}</a></div>
+                <img src="${data.hits[i].recipe.image}" alt="${data.hits[i].recipe.label}" SameSite="Lax">
              
             </div>`;
-    $(".card-content").append(template);
+    $(".section").append(template);
   }
 }
 
@@ -88,11 +87,62 @@ function sendApiRequest(ingredient) {
       console.log(data);
       console.log(data.data[0].images.fixed_height.url);
       var imgPath = data.data[0].images.fixed_height.url;
+
       var img = document.createElement("img");
       img.setAttribute("src", imgPath);
-      document.body.appendChild(img);
+      giphyPrint.append(img);
     });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Functions to open and close a modal
+  function openModal($el) {
+    $el.classList.add("is-active");
+  }
+
+  function closeModal($el) {
+    $el.classList.remove("is-active");
+  }
+
+  function closeAllModals() {
+    (document.querySelectorAll(".modal") || []).forEach(($modal) => {
+      closeModal($modal);
+    });
+  }
+
+  // Add a click event on buttons to open a specific modal
+  (document.querySelectorAll(".js-modal-trigger") || []).forEach(($trigger) => {
+    const modal = $trigger.dataset.target;
+    const $target = document.getElementById(modal);
+
+    $trigger.addEventListener("click", () => {
+      openModal($target);
+    });
+  });
+
+  // Add a click event on various child elements to close the parent modal
+  (
+    document.querySelectorAll(
+      ".modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button"
+    ) || []
+  ).forEach(($close) => {
+    const $target = $close.closest(".modal");
+
+    $close.addEventListener("click", () => {
+      closeModal($target);
+    });
+  });
+
+  // Add a keyboard event to close all modals
+  document.addEventListener("keydown", (event) => {
+    const e = event || window.event;
+
+    if (e.keyCode === 27) {
+      // Escape key
+      closeAllModals();
+    }
+  });
+});
 
 // function insertRecipe (data) {
 //     $(".rep_card").empty();

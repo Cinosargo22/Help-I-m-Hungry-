@@ -1,18 +1,38 @@
 * {
+    margin: 0;;
+    padding: 0;;
 /* font-size: larger;
 align-content: center; */
 background-color: #FFBA08;
 };
 
 /* todo */
-img{
+/* img{
 
-};
+}; */
 /* this class will be used to give a border and color to `a` tags */
 .protien-list ul, li{
     border-bottom: double;
     border-color: #261447;
 };
 
+.row{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding:0;
+    align-items: center;
+}
 
 
+.section{
+    max-width: 1341px;
+    max-height: 500px;
+}
+
+.card {
+    display: block;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
