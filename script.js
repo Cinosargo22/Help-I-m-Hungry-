@@ -24,7 +24,7 @@ var formSubmitHandler = function (event) {
     sendApiRequest(ingredient);
   } else {
     //change to modal
-    modal(
+    Modal(
       "Please enter at least one ingredient! Dig to the back of your pantry!"
     );
     console.log(ingredient);
@@ -61,7 +61,8 @@ function showRecipe(data) {
   for (var i = 0; i < 10; i++) {
     console.log(data.hits[i].recipe.url);
     // change styling of template to the card format that we want
-    let template = `<div class="card  is-medium  " style="width: 500px; height 500px;">
+    let template = `<div class="card  is-medium  " style="width: 1080px; height 1080px;">
+                    <button class ="fav-icon" is-primary">❤️‍🔥</button>
                 <div class=""><a href="${data.hits[i].recipe.url}" target="_blank">${data.hits[i].recipe.label}</a></div>
                 <img src="${data.hits[i].recipe.image}" alt="${data.hits[i].recipe.label}" SameSite="Lax">
              
