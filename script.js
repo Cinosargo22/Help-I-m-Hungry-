@@ -59,6 +59,11 @@ function showRecipe(data) {
   for (var i = 0; i < 5; i++) {
     console.log(data.hits[i].recipe.url);
     // change styling of template to the card format that we want 
+
+    // ADD FAVORITE BUTTON TO RECIPE CARD TEMPLATE, ASSIGN ICON (i.e.; "heart", etc.)
+
+    // ADD CLEAR LOCAL STORAGE BUTTON (similar to HW4 clear high scores operation)
+    
     let template = `<div class="card cell medium-4" style="width: 300px;">
                 <div class=""><a href="${data.hits[i].recipe.url}" target="_blank">${data.hits[i].recipe.label
     }</a></div>
@@ -111,3 +116,16 @@ function sendApiRequest(ingredient) {
 // }
 
 // insertRecipe();
+
+
+// LISTEN FOR THE FAVORITE BUTTON CLICK + SAVE TO LOCAL STORAGE
+    // event target
+    // use a class for "favorite" or something similar
+
+// Enable the "favorite" on the recipe card
+
+// LISTEN FOR THE UN-FAVORITE BUTTON CLICK + SAVE TO LOCAL STORAGE
+    // event target
+    // use a class for "favorite" or something similar
+
+// Enable the "un-favorite" on the recipe card
