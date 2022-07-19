@@ -121,6 +121,22 @@ function sendApiRequest(ingredient) {
 // LISTEN FOR THE FAVORITE BUTTON CLICK + SAVE TO LOCAL STORAGE
     // event target
     // use a class for "favorite" or something similar
+//funtionfetchAndDisplaySetOptions()
+//var savedSetsJSON = localStorage.getote,("mtgSets")
+//var savedSets = savedSetsJSON ? JSON.parse (savedSetsJSON) :false;
+//if (savedSets) {
+//var content = getSetOptionsContent(savedSets);
+//setFielEl.append(content);
+//return;
+//}
+//getMTGSets()
+//.then(functional(data) {
+// var sets = data.sets;
+//var content = getSetOptionsContent (sets);
+//setFieldEl.innerHTML = "";
+//setFieldEl.append(content);
+//});
+
 
 // Enable the "favorite" on the recipe card
 
