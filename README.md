@@ -60,7 +60,7 @@ The following link takes you to the deployed application:
 
 ## Finished Page for Reference
 
-The following image shows the web application's appearance and functionality: https://nugemeister.github.io/password-generator/
+The following image shows the web application's appearance and functionality: https://cinosargo22.github.io/Help-I-m-Hungry-/
 
 ![This is a screenshot of the live webpage.](./Assets/images/03-javascript-homework-screenshot.png)
 <br></br>
