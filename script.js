@@ -8,16 +8,6 @@
 
 var ingredientInputEl = document.querySelector(".ingredient-input");
 var ingredientSearchButton = document.querySelector(".ingredient-button");
-requestUrl =
-  "https://api.edamam.com/api/recipes/v2?type=public&q=chicken&app_id=94c55930&app_key=%201c3476c6fc8d3b7ee88d9f887c63fd85";
-
-// fetch(requestUrl)
-//   .then(function (response) {
-//     return response.json();
-//   })
-//   .then(function (data) {
-//     console.log(data);
-//   });
 
 var formSubmitHandler = function (event) {
   console.log(event);
@@ -43,7 +33,7 @@ var getRecipe = function (ingredient) {
   var apiUrl =
     "https://api.edamam.com/api/recipes/v2?type=public&q=" +
     ingredient +
-    "&app_id=94c55930&app_key=%201c3476c6fc8d3b7ee88d9f887c63fd85";
+    "&limit=5&app_id=94c55930&app_key=%201c3476c6fc8d3b7ee88d9f887c63fd85";
 
   fetch(apiUrl)
     .then(function (response) {
@@ -56,10 +46,10 @@ var getRecipe = function (ingredient) {
       // img.setAttribute("src", imgPath)
       // document.body.appendChild(img)
     })
-    .catch(function (error) {
-      alert("Unable to connect to Edamam.");
-      // console.log(error);
-    });
+    // .catch(function (error) {
+    //   alert("Unable to connect to Edamam.");
+    //   // console.log(error);
+    // });
 };
 
 function showRecipe(data) {
@@ -70,7 +60,7 @@ function showRecipe(data) {
     console.log(data.hits[i].recipe.url);
     // change styling of template to the card format that we want 
     let template = `<div class="card cell medium-4" style="width: 300px;">
-                <div class=""><a href="${data.hits[i].recipe.url}" target="_blank">${data.hits[1].recipe.label
+                <div class=""><a href="${data.hits[i].recipe.url}" target="_blank">${data.hits[i].recipe.label
     }</a></div>
                 <img src="${data.hits[i].recipe.image}" alt="${
       data.hits[i].recipe.label
@@ -87,7 +77,7 @@ function sendApiRequest(ingredient) {
   var giphyApiUrl =
     "https://api.giphy.com/v1/gifs/search?api_key=C3ZPqXLVWSHKBdEwxjhZDGcmnfeuQ8LE&q=" +
     ingredient +
-    "&limit=25&offset=0&rating=g&lang=en";
+    "&limit=10&offset=0&rating=g&lang=en";
 
   fetch(giphyApiUrl)
     .then(function (data) {
