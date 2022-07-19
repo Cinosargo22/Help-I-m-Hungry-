@@ -61,6 +61,8 @@ var getRecipe = function (ingredient) {
 };
 
 var showRecipe = function(hits) {
+    for (var i = 0; i < 5; i++) {
+    
     var recipeUrlPath = hits[0].recipe.url
     console.log(recipeUrlPath)
     var recipeImgPath = hits[0].recipe.images.REGULAR.url
@@ -68,6 +70,7 @@ var showRecipe = function(hits) {
     var recipe = document.createElement("recipe")
     console.log(recipe)
     document.body.appendChild(recipe)
+    }
 }
 
 ingredientSearchButton.addEventListener('click', formSubmitHandler);
