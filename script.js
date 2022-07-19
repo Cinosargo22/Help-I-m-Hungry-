@@ -63,21 +63,21 @@ var getRecipe = function (ingredient) {
 };
 
 function showRecipe(data) {
-  console.log(data.hits[0]);
-  $(".rep_card").empty();
+  console.log(data);
+  $(".card-content").empty();
 
   for (var i = 0; i < 5; i++) {
-    console.log(hits.hits[i].recipe.url);
+    console.log(data.hits[i].recipe.url);
+    // change styling of template to the card format that we want 
     let template = `<div class="card cell medium-4" style="width: 300px;">
-                <div class=""><a href="${[i].recipe.url}" target="_blank">${
-      recipe.label
+                <div class=""><a href="${data.hits[i].recipe.url}" target="_blank">${data.hits[1].recipe.label
     }</a></div>
-                <img src="${[i].recipe.image}" alt="${
-      [i].recipe.label
+                <img src="${data.hits[i].recipe.image}" alt="${
+      data.hits[i].recipe.label
     }" SameSite="Lax">
              
             </div>`;
-    $(".rep_card").append(template);
+    $(".card-content").append(template);
   }
 }
 
