@@ -58,10 +58,10 @@ function showRecipe(data) {
   console.log(data);
   $(".card-content").empty();
 
-  for (var i = 0; i < 5; i++) {
+  for (var i = 0; i < 10; i++) {
     console.log(data.hits[i].recipe.url);
     // change styling of template to the card format that we want
-    let template = `<div class="card  is-medium media " style="width: 500px;">
+    let template = `<div class="card  is-medium  " style="width: 500px; height 500px;">
                 <div class=""><a href="${data.hits[i].recipe.url}" target="_blank">${data.hits[i].recipe.label}</a></div>
                 <img src="${data.hits[i].recipe.image}" alt="${data.hits[i].recipe.label}" SameSite="Lax">
              
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Add a click event on buttons to open a specific modal
-  (document.querySelectorAll(".js-modal-trigger") || []).forEach(($trigger) => {
+  (document.querySelectorAll(".modal_box") || []).forEach(($trigger) => {
     const modal = $trigger.dataset.target;
     const $target = document.getElementById(modal);
 
