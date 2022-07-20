@@ -6,7 +6,7 @@
 // var borderPurple ="#261447";
 // var bgWhite = "#FBFEF9";
 
-var giphyPrint = document.getElementById("ingredient-form");
+var giphyPrint = document.getElementById("giphy");
 
 var ingredientInputEl = document.querySelector(".ingredient-input");
 var ingredientSearchButton = document.querySelector(".ingredient-button");
@@ -44,31 +44,31 @@ var getRecipe = function (ingredient) {
       console.log(data);
       showRecipe(data);
     });
-  
-//     .catch(function (error) {
-//     alert("Unable to connect to Edamam.");
-//     // console.log(error);
-//   });
+
+  //     .catch(function (error) {
+  //     alert("Unable to connect to Edamam.");
+  //     // console.log(error);
+  //   });
 };
 
 function showRecipe(data) {
   $(".section").empty();
-    console.log(data);
+  console.log(data);
   $(".card-content").empty();
 
   for (var i = 0; i < 5; i++) {
     console.log(data.hits[i].recipe.url);
 
-// change styling of template to the card format that we want
-    let template = `<div class="content is-info  is-large is-relative is-clearfix " style="width: 1080px; height 1080px;">
-                    <button class ="fav-icon" is-primary">❤️‍🔥</button>
-                <div class="is-centered"><a href="${data.hits[i].recipe.url}" target="_blank">${data.hits[i].recipe.label}</a></div>
-                <img class="has-text-centered" src="${data.hits[i].recipe.image}" alt="${data.hits[i].recipe.label}" SameSite="Lax">
+    // change styling of template to the card format that we want
+    let template = `<div style="background-image: url(./) class="content is-block  is-info  is-medium is-relative  " style="width: 1080px; height 1080px;">
+                    <button style="background-color: darkslateblue;" class ="fav-icon" is-primary">❤️</button>
+                <div class="is-block has-text-centered" ><a style="background-image: url(./assets/images/Logos_Help!IMHungry/white_logo_dark_background.jpg); color: white; href="${data.hits[i].recipe.url}" target="_blank">${data.hits[i].recipe.label}</a></div>
+                <img class="is-centered is-block m-2 p-2" src="${data.hits[i].recipe.image}" alt="${data.hits[i].recipe.label}" SameSite="Lax">
                 
                         </div>`;
-                    $(".section").append(template);
-                }
-            }
+    $(".section").append(template);
+  }
+}
 
 ingredientSearchButton.addEventListener("click", formSubmitHandler);
 
@@ -93,7 +93,6 @@ function sendApiRequest(ingredient) {
       giphyPrint.append(img);
     });
 }
-
 
 // document.addEventListener("DOMContentLoaded", () => {
 //   // Functions to open and close a modal
@@ -145,19 +144,17 @@ function sendApiRequest(ingredient) {
 //   });
 // });
 
-
-
 // // Enable the "favorite" on the recipe card
 
 // Listen for the FAVORITE BUTTON
-    // $(“fav-icon”).on(“click”, function () {
-    //     Var grabRecipe = localStorage.getItem(“recipe”)
-    //     var favArray = [];
-    //     if (recipe){ =
-    //     fav = JSON.parse(recipe);
-    //     }
-    //     localstorage.setItem(‘favRecipe’, JSON.stringify(favArray));
-    //     }};
+// $(“fav-icon”).on(“click”, function () {
+//     Var grabRecipe = localStorage.getItem(“recipe”)
+//     var favArray = [];
+//     if (recipe){ =
+//     fav = JSON.parse(recipe);
+//     }
+//     localstorage.setItem(‘favRecipe’, JSON.stringify(favArray));
+//     }};
 
 // // LISTEN FOR THE UN-FAVORITE BUTTON CLICK + SAVE TO LOCAL STORAGE
 //     // event target
