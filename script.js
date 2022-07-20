@@ -56,14 +56,14 @@ function showRecipe(data) {
     console.log(data);
   $(".card-content").empty();
 
-  for (var i = 0; i < 10; i++) {
+  for (var i = 0; i < 5; i++) {
     console.log(data.hits[i].recipe.url);
 
 // change styling of template to the card format that we want
-    let template = `<div class="card  is-medium  " style="width: 1080px; height 1080px;">
+    let template = `<div class="content is-info  is-large is-relative is-clearfix " style="width: 1080px; height 1080px;">
                     <button class ="fav-icon" is-primary">❤️‍🔥</button>
-                <div class=""><a href="${data.hits[i].recipe.url}" target="_blank">${data.hits[i].recipe.label}</a></div>
-                <img src="${data.hits[i].recipe.image}" alt="${data.hits[i].recipe.label}" SameSite="Lax">
+                <div class="is-centered"><a href="${data.hits[i].recipe.url}" target="_blank">${data.hits[i].recipe.label}</a></div>
+                <img class="has-text-centered" src="${data.hits[i].recipe.image}" alt="${data.hits[i].recipe.label}" SameSite="Lax">
                 
                         </div>`;
                     $(".section").append(template);
