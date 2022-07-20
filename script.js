@@ -11,12 +11,22 @@ var giphyPrint = document.getElementById("ingredient-form");
 var ingredientInputEl = document.querySelector(".ingredient-input");
 var ingredientSearchButton = document.querySelector(".ingredient-button");
 
+var searchEl = document.getElementById("input");
+var historyEl = document.getElementById("history");
+
+let recipeHistory = JSON.parse(localStorage.getItem(`key`)) || [];
+
+console.log("Recipe History: " + recipeHistory);
+
 var formSubmitHandler = function (event) {
   console.log(event);
   event.preventDefault();
 
   var ingredient = ingredientInputEl.value.trim();
   console.log(ingredient);
+
+
+  
 
   if (ingredient) {
     console.log("if(ingredient)");
@@ -70,7 +80,11 @@ function showRecipe(data) {
                 }
             }
 
-ingredientSearchButton.addEventListener("click", formSubmitHandler);
+ingredientSearchButton.addEventListener("click", formSubmitHandler, function (){
+  var searchTerm = ingredient.value 
+  renderSearchHistory();
+  localStorage.setItem(recipeHistory, JSON.stringify(recipeHistory))
+});
 
 function sendApiRequest(ingredient) {
   var giphyApiUrl =
@@ -94,6 +108,16 @@ function sendApiRequest(ingredient) {
     });
 }
 
+function renderSearchHistory (){
+  historyEl.innerHTML = "";
+  for (var i=0; i<10; i++){
+    searchEl.addEventListener("click", function (){
+      getRecipe(searchEL.value);
+    })
+    historyEl.append(searchEl);
+  }
+  console.log(renderSearchHistory);
+}
 
 // document.addEventListener("DOMContentLoaded", () => {
 //   // Functions to open and close a modal
