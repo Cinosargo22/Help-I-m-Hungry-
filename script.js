@@ -52,7 +52,8 @@ var getRecipe = function (ingredient) {
 };
 
 function showRecipe(data) {
-  console.log(data);
+  $(".section").empty();
+    console.log(data);
   $(".card-content").empty();
 
   for (var i = 0; i < 10; i++) {
@@ -92,6 +93,7 @@ function sendApiRequest(ingredient) {
       giphyPrint.append(img);
     });
 }
+
 
 // document.addEventListener("DOMContentLoaded", () => {
 //   // Functions to open and close a modal
@@ -143,27 +145,19 @@ function sendApiRequest(ingredient) {
 //   });
 // });
 
-// function insertRecipe (data) {
-//     $(".rep_card").empty();
-//     let recipes = data.hits;
-//     for (var i = 0; i < 5; i++) {
-//         let recipe = recipes[i].recipe;
-//         let template =
-//             `<div class="card cell medium-4" style="width: 300px;">
 
-
-//                 <div class="card-divider"><a href="${recipe.url}" target="_blank">${recipe.label}</a></div>
-//                 <img src="${recipe.image}" alt="${recipe.label}" SameSite="Lax">
-//                 <p>Calories: ${Math.round(recipe.calories)}</p>
-//                 <p>Serves: ${recipe.yield}</p>
-//             </div>`;
-//     $( ".rep_card").append(template);
-//     }
-// }
-
-// // insertRecipe();
 
 // // Enable the "favorite" on the recipe card
+
+// Listen for the FAVORITE BUTTON
+    // $(“fav-icon”).on(“click”, function () {
+    //     Var grabRecipe = localStorage.getItem(“recipe”)
+    //     var favArray = [];
+    //     if (recipe){ =
+    //     fav = JSON.parse(recipe);
+    //     }
+    //     localstorage.setItem(‘favRecipe’, JSON.stringify(favArray));
+    //     }};
 
 // // LISTEN FOR THE UN-FAVORITE BUTTON CLICK + SAVE TO LOCAL STORAGE
 //     // event target
