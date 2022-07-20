@@ -1,18 +1,70 @@
 * {
-/* font-size: larger;
+  margin: 0;
+  padding: 0;
+  /* font-size: larger;
 align-content: center; */
-background-color: #FFBA08;
-};
+  background-color: #ffba08;
+}
 
 /* todo */
-img{
+/* img{
 
-};
+}; */
 /* this class will be used to give a border and color to `a` tags */
-.protien-list ul, li{
-    border-bottom: double;
-    border-color: #261447;
-};
+.protien-list ul,
+li {
+  border-bottom: double;
+  border-color: #261447;
+}
 
+.columns {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
 
+.section {
+  max-width: 1341px;
+  max-height: 1080px;
+}
 
+.card {
+  display: block;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fav-button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button {
+  background-color: #3e8e41;
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+div {
+  display: block;
+  padding: 5px;
+  margin: 5px;
+  align-items: center;
+}
