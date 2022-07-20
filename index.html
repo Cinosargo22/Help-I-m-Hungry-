@@ -35,7 +35,7 @@
                 <div class="container"> 
                   <!--  quick links to specific protien/recipes -->
                   <ul class="protien-list is-centered is-block mb-0 p-6 " >
-                    <li class="is-active  is-centered"></li>
+                    <li class="  is-centered"></li>
                     <li><button  class="button is-medium is-responsive  is-uppercase is-rounded is-inverted has-text-link " ><a href="https://www.edamam.com/results/recipes/?search=beef">Beef🍖</a></button></li>
                     <li><button class="button is-medium is-responsive  is-uppercase is-rounded is-inverted  " ><a href="https://www.edamam.com/results/recipes/?search=chicken">Chicken🍗</a></button></li>
                     <li><button class="button is-medium is-responsive  is-uppercase is-rounded is-inverted "><a href="https://www.edamam.com/results/recipes/?search=seafood">SeaFood🍤</a></button></li>
@@ -48,7 +48,7 @@
             <!-- input area to search for recipies -->
             <form id="ingredient-form" class="? " >
               <input class="input is-large ingredient-input" type="text" placeholder="Enter an ingredient here!">
-              <button type="submit" class=" button is-large ingredient-button is-primary js-modal-trigger" data-target="modal-js-example" id="input">Search</button>
+              <button type="submit" class=" button is-large ingredient-button is-primary js-modal-trigger" data-target="are-you-hungry" id="input">Search</button>
               
             </form>
           </section>
@@ -83,6 +83,18 @@
           is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
         </p>
       </div>
+      <div id="are-you-hungry" class="modal">
+        <div class="modal-background"></div>
+      
+        <div class="modal-content">
+          <div class="box">
+            <p>"Please enter at least one ingredient! Dig to the back of your pantry!"</p>
+            <!-- Your content -->
+          </div>
+        </div>
+      
+        <button class="modal-close is-large" aria-label="close"></button>
+      </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./script.js"></script>
@@ -90,19 +102,7 @@
     <script>
   
   </script>
-  <div id="modal_box" class="modal">
-    <div class="modal-background"></div>
-  
-    <div class="modal-content">
-      <div class="box">
-        <p>Modal JS example</p>
-        <!-- Your content -->
-      </div>
-    </div>
-  
-    <button class="modal-close is-large" aria-label="close"></button>
-  </div>
-  </div>
+ 
   </body>
 
 </html>
