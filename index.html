@@ -5,60 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Help! I'm Hungry!</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
+    
+    
     
   </head>
-  <body style="background-image: url(./assets/bg-imgs/pexels-cottonbro-4113949.jpg); background-size:cover; background-blend-mode:luminosity ;">
+  <body class="m-3 p-3" style="background-image: url(./assets/bg-imgs/pexels-cottonbro-4113949\ \(1\).jpg); background-size:cover; background-blend-mode:luminosity ;">
     <!-- nav bar -->
     <!-- todo -->
     <!-- create mock up of page after recipe search -->
     <!-- use js to generate subsequent pages.  -->
+>
     
-    <section class="hero is-medium">
+    <section class="hero is-medium is-bold">
       <!-- Hero head: will stick at the top -->
-      <div class="hero-head">
+      <div class="hero-head is-bold">
         <!-- space left open for nav area -->
           </div>
     
       <!-- Hero content: will be in the middle -->
-      <div class="hero-body"  >
+      <div class="hero-body mb-0 "  >
         <div class="container has-text-centered">
           <p class="title">
-            <img src="./assets/images/Logos_Help!IMHungry/logo_transparent_background.png">
+            <img class="is-white" src="./assets/images/Logos_Help!IMHungry/logo_transparent_background.png">
               </a>
           </p>
-          <p class="subtitle">
+          <section  class="subtitle is-centered">
             <div class="hero-foot">
               <nav class="tabs">
-                <div class="container">
-                  <!-- todo add links to specified dishes -->
+                <div class="container"> 
                   <!--  quick links to specific protien/recipes -->
-                  <ul class="protien-list">
-                    <li class="is-active"></li>
-                    <li><a>Veggie</a></li>
-                    <li><a>Chicken</a></li>
-                    <li><a>Beef</a></li>
-                    <li><a>Sea Food</a></li>
+                  <ul class="protien-list is-centered is-block mb-0 p-6 " >
+                    <li class="  is-centered"></li>
+                    <li><button  class="button is-medium is-responsive  is-uppercase is-rounded is-inverted has-text-link " ><a href="https://www.edamam.com/results/recipes/?search=beef">Beef🍖</a></button></li>
+                    <li><button class="button is-medium is-responsive  is-uppercase is-rounded is-inverted  " ><a href="https://www.edamam.com/results/recipes/?search=chicken">Chicken🍗</a></button></li>
+                    <li><button class="button is-medium is-responsive  is-uppercase is-rounded is-inverted "><a href="https://www.edamam.com/results/recipes/?search=seafood">SeaFood🍤</a></button></li>
+                    <li><button class="button is-medium is-responsive  is-uppercase is-rounded is-inverted "><a href="https://www.edamam.com/results/recipes/?search=veggie">Veggie🍅</a></button></li>
                     
                   </ul>
                 </div>
               </nav>
             </div>
             <!-- input area to search for recipies -->
-            <form id="ingredient-form" class="?">
+            <form id="ingredient-form" class="? " >
               <input class="input is-large ingredient-input" type="text" placeholder="Enter an ingredient here!">
-              <button type="submit" class=" button ingredient-button is-primary js-modal-trigger" data-target="modal-js-example" id="input">Search</button>
+              <button type="submit" class=" button is-large ingredient-button is-primary js-modal-trigger" data-target="are-you-hungry" id="input">Search</button>
               
             </form>
-          </p>
+          </section>
         </div>
 
       </div>
      </div>
     </section>
+
+    <section class=" section columns m-0 p-0 is-centered" >Giph section</section>
+
+
+
 <!-- todo...possible hero section to import gifs or a welcome message -->
     <!-- More quick links...promoted/popular recipies  -->
-    <section class="section  is-large  columns" id="flex" >
+    <section class=" columns m-6 p-6 is-centered "  id="giphy"  >
       <!-- todo testing section -->
       
       
@@ -77,6 +83,18 @@
           is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
         </p>
       </div>
+      <div id="are-you-hungry" class="modal">
+        <div class="modal-background"></div>
+      
+        <div class="modal-content">
+          <div class="box">
+            <p>"Please enter at least one ingredient! Dig to the back of your pantry!"</p>
+            <!-- Your content -->
+          </div>
+        </div>
+      
+        <button class="modal-close is-large" aria-label="close"></button>
+      </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./script.js"></script>
@@ -84,19 +102,11 @@
     <script>
   
   </script>
-  <div id="modal_box" class="modal">
-    <div class="modal-background"></div>
-  
-    <div class="modal-content">
-      <div class="box">
-        <p>Modal JS example</p>
-        <!-- Your content -->
-      </div>
-    </div>
-  
-    <button class="modal-close is-large" aria-label="close"></button>
-  </div>
-  </div>
+ 
   </body>
 
 </html>
+
+
+
+<div style="background-color: darkslateblue;"></div>
